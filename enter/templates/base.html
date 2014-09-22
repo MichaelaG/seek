@@ -5,13 +5,14 @@
     <!-- <meta name="viewport" content="width=1160, initial-scale=1"> -->
     <title>{% block title %}SEEK - Standardized Enzyme Engineering Knowledgebase{% endblock %}</title>
     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'enter/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'enter/theme.css' %}">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/28e7751dbec/sorting/scientific.js"></script>
-    <script type="text/javascript" charset="utf8" src="{% static 'enter/jquery.sparkline.min.js' %}"></script>
+    <script type="text/javascript" charset="utf8" src="{% static 'jquery.sparkline.min.js' %}"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,25 +23,56 @@
   </script>
   </head>
   <body>
-    <h1>
-      SEEK
-      <br>
-      <small>
-        Standardized Enzyme Engineering Knowledgebase
-      </small>
-    </h1>
-    <nav>
-      <a href="/enter/">Home</a>
-      <a href="/enter/systems">Materials &amp; Methods</a>
-      <a href="/enter/browse">Browse Data</a>
-      <a href="/enter/submit">Submit</a>
-      <a href="/enter/help">Help</a>
+    <header>
+      <table>
+        <td>
+          <h1>
+            SEEK
+          </h1>
+        </td>
+        <td>
+        <h1>
+          <small>
+            STANDARDIZED ENZYME ENGINEERING KNOWLEDGEBASE
+          </small>
+        </h1>
+      </td>
+    </table>
+      <nav>
+        <div class="navbar navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navigation-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse collapse navigation-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/enter/">Home</a></li>
+              <li><a href="/enter/systems">Materials & Methods</a></li>
+              <li><a href="/enter/browse">Browse Data</a></li>
+              <li><a href="/enter/submit">Submit</a></li>
+              <li><a href="/enter/help">Help</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    {% block content %}Default text{% endblock content %}
-    <footer>
-      <p><a href="https://sites.google.com/site/ucdsiegellab/">The Siegel Lab</a> at the University of California, Davis</p>
-      <p>UC Davis Genome Center, 451 Health Sciences Drive, Davis CA 95616</p>
-      <p><small>Need help? Email <a href="">siegel.lab.ucd@gmail.com</a></small></p>
-    </footer>
+    </header>
+    <div class = "content">
+      {% block content %}Default text{% endblock content %}
+    </div>
+    <div>
+      <footer>
+        <h2>
+          <small>
+          <p><a href="https://sites.google.com/site/ucdsiegellab/">The Siegel Lab</a> at the University of California, Davis</p>
+          <p>UC Davis Genome Center</p>
+          <p>451 Health Sciences Drive, Davis CA 95616</p>
+          <p>Need help? Email <a href="mailto:siegel.lab.ucd@gmail">siegel.lab.ucd@gmail.com</a></p>
+          </small>
+        </h2>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,37 +1,32 @@
 {% extends "base.html" %}
 {% block title %}SEEK - Materials &amp; Methods{% endblock title %}
 {% block content %}
-<div id="blue">
+<div>
 <h2>Beta-glucosidase&nbsp;B</h2>
-<table>
-  <tr>
-    <td>
       <ul>
         <li>Addgene: <a href="https://www.addgene.org/browse/article/8557/">BglB in pET29b(+)</a></li>
+        <br>
         <li>Organism: <em>Paenibacillus polymyxa</em></li>
+        <br>
         <li>Uniprot: <a href="http://www.uniprot.org/uniprot/P22505">P22505</a></li>
+        <br>
         <li>PDB: <a href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2jie">2JIE</a></li>
+        <br>
         <li>EC: <a href="http://www.brenda-enzymes.info/php/result_flat.php4?ecno=3.2.1.21">3.2.1.21</a></li>
-    </td>
-    <td>
+      </ul>
       <h3>Design</h3>
-      <p><a href="mailto:siegel.lab.ucd@gmail.com">Email us for the latest version of Foldit</a></p>
+      <p class = "pop"><a href="mailto:siegel.lab.ucd@gmail.com">Email us for the latest version of Foldit</a></p>
       {% load staticfiles %}
       <p><i class="fa fa-file"></i> <a href="https://github.com/dacarlin/bagel-foldit/archive/master.zip">Foldit files</a></p>
-    </td>
-    <td>
+
       <h3>Build</h3>
       <p>Option A: <a href="https://www.transcriptic.com">Transcriptic</a> (Attn: Yin He)</p>
         <p>Option B: <i class="fa fa-file"></i> <a href="https://drive.google.com/file/d/0B3zIXvOOrmpqbGpVZV9ydW5pSnc/edit?usp=sharing">Mutagenesis protocol</a></p>
         <p><i class="fa fa-file"></i> <a href="{% static 'enter/bglb_expr_pur.pdf' %}">Expression and purification</a></p>
-    </td>
-    <td>
+
       <h3>Test</h3>
         <p><i class="fa fa-file"></i> <a href="{% static 'enter/bglb_expr_pur.pdf' %}">Assay protocol</a></p>
         <p><i class="fa fa-file"></i> <a href="https://github.com/dacarlin/Michaelis-Menten">Data analysis tools</a></p>
-    </td>
-  </tr>
-</table>
-<hr>
+      </p>
 </div>
 {% endblock content %}
